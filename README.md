@@ -10,11 +10,11 @@ Install `@bobbyg603/ngx-toggle`:
 npm i @bobbyg603/ngx-toggle
 ```
 
-Import the `NgxToggle` module in each module that uses `<ngx-toggle>`:
+Import the `NgxToggleModule` module in each module that uses `<ngx-toggle>`:
 
-[app.module.ts](https://github.com/bobbyg603/ngx-toggle/blob/81b7859846914832575a083b2741d88733e695d7/projects/ngx-toggle-example/src/app/app.module.ts#L14)
+[app.module.ts](https://github.com/bobbyg603/ngx-toggle/blob/main/projects/ngx-toggle-example/src/app/app.module.ts)
 ```ts
-import { NgAnimatedCounterModule } from '@bugsplat/ng-animated-counter';
+import { NgxToggleModule } from '@bobbyg603/ngx-toggle';
 
 @NgModule({
   declarations: [
@@ -22,7 +22,7 @@ import { NgAnimatedCounterModule } from '@bugsplat/ng-animated-counter';
   ],
   imports: [
     BrowserModule,
-    NgAnimatedCounterModule,
+    NgxToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent]
@@ -34,7 +34,7 @@ export class AppModule { }
 
 Add `<ngx-toggle>` to your component's template:
 
-[app.component.ts](https://github.com/bobbyg603/ngx-toggle/blob/81b7859846914832575a083b2741d88733e695d7/projects/ngx-toggle-example/src/app/app.component.html#L12)
+[app.component.ts](https://github.com/bobbyg603/ngx-toggle/blob/139148ac2d6f18f69777835686fbfd44766d58d1/projects/ngx-toggle-example/src/app/app.component.html#L12)
 ```ts
 <ngx-toggle 
     id="toggle-example"

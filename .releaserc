@@ -10,8 +10,7 @@
     [
       "@semantic-release/npm",
       {
-        "pkgRoot": "dist/ngx-toggle",
-        "npmPublish": false
+        "pkgRoot": "dist/ngx-toggle"
       }
     ]
   ]
