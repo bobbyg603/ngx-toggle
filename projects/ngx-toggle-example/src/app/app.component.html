@@ -9,8 +9,8 @@
       <div class="row">
         <div class="col-12 py-4 text-center">
           Monthly
-          <ngx-toggle id="toggle-example" [checked]="checked" [disabled]="false"
-            (checkedChanged)="onCheckedChanged($event)">
+          <ngx-toggle id="toggle-example" [(checked)]="checked" [disabled]="false"
+            (checkedChange)="onCheckedChange($event)">
           </ngx-toggle>
           Annually
         </div>

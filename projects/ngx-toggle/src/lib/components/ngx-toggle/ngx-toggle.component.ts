@@ -10,9 +10,9 @@ export class NgxToggleComponent {
   @Input() id = 'ngx-toggle';
   @Input() checked = false;
   @Input() disabled = false;
-  @Output() checkedChanged = new EventEmitter<boolean>();
+  @Output() checkedChange = new EventEmitter<boolean>();
 
   onClick(event: any): void {
-    this.checkedChanged.emit(event.target.checked);
+    this.checkedChange.emit(event.target.checked);
   }
 }
