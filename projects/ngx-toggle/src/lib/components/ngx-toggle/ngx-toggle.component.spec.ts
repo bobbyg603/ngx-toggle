@@ -73,7 +73,7 @@ describe('NgxToggleComponent', () => {
   describe('click', () => {
     it('should emit checkedChanged', async () => {
       const checked = true;
-      const resultPromise = firstValueFrom(component.checkedChanged);
+      const resultPromise = firstValueFrom(component.checkedChange);
       component.checked = !checked;
       fixture.detectChanges();
 

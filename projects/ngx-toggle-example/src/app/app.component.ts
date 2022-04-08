@@ -21,9 +21,8 @@ export class AppComponent {
   standardPriceParams = createNgAnimatedCounterParams(50, 50);
   premiumPriceParams = createNgAnimatedCounterParams(100, 100);
 
-  onCheckedChanged(checked: boolean): void {
-    this.checked = checked;
-
+  onCheckedChange(checked: boolean): void {
+    console.log('checked:', checked);
     if (checked) {
       this.basicPriceParams = createNgAnimatedCounterParams(25, 12);
       this.standardPriceParams = createNgAnimatedCounterParams(50, 25);

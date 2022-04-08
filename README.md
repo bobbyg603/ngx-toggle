@@ -38,9 +38,9 @@ Add `<ngx-toggle>` to your component's template:
 ```ts
 <ngx-toggle 
     id="toggle-example"
-    [checked]="checked"
+    [(checked)]="checked"
     [disabled]="false"
-    (checkedChanged)="onCheckedChanged($event)">
+    (checkedChange)="onCheckedChanged($event)">
 </ngx-toggle>
 ```
 
@@ -56,9 +56,9 @@ Be sure to give each toggle a unique id. Failing to give each toggle a unique id
 | disabled | boolean | control is not interactable   |
 
 ### Outputs
-| Property       | Type                    | Description                                       |
-|----------------|-------------------------|---------------------------------------------------|
-| checkedChanged | EventEmitter\<boolean\> | Emits new `checked` when control has been toggled |
+| Property       | Type                    | Description                                             |
+|----------------|-------------------------|---------------------------------------------------------|
+| checkedChange  | EventEmitter\<boolean\> | Emits new `checked` value when control has been toggled |
 
 ## Attribution
 
