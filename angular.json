@@ -156,8 +156,9 @@
       }
     }
   },
-  "defaultProject": "ngx-toggle-example",
   "cli": {
-    "defaultCollection": "@angular-eslint/schematics"
+    "schematicCollections": [
+      "@angular-eslint/schematics"
+    ]
   }
 }
