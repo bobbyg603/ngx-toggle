@@ -1,3 +1,10 @@
+# [2.1.0](https://github.com/bobbyg603/ngx-toggle/compare/v2.0.0...v2.1.0) (2022-06-27)
+
+
+### Features
+
+* update to Angular 14 ([#7](https://github.com/bobbyg603/ngx-toggle/issues/7)) ([9b56218](https://github.com/bobbyg603/ngx-toggle/commit/9b5621805a9b952a4a6e69fc7b4688065a9b5da7))
+
 # [2.0.0](https://github.com/bobbyg603/ngx-toggle/compare/v1.0.1...v2.0.0) (2022-04-08)
 
 
