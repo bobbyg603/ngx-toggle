@@ -1,3 +1,10 @@
+## [3.0.1](https://github.com/bobbyg603/ngx-toggle/compare/v3.0.0...v3.0.1) (2022-06-27)
+
+
+### Bug Fixes
+
+* fix package peerDependencies ([e151367](https://github.com/bobbyg603/ngx-toggle/commit/e151367d083e49a2e9a61a1d952a1753a91e7750))
+
 # [3.0.0](https://github.com/bobbyg603/ngx-toggle/compare/v2.1.0...v3.0.0) (2022-06-27)
 
 
