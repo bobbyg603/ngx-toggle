@@ -1,3 +1,13 @@
+# [3.0.0](https://github.com/bobbyg603/ngx-toggle/compare/v2.1.0...v3.0.0) (2022-06-27)
+
+
+* chore!: update to Angular 14 ([fc3440e](https://github.com/bobbyg603/ngx-toggle/commit/fc3440e13dcacdd10504a5e66548933a8289570d))
+
+
+### BREAKING CHANGES
+
+* update to Angular 14
+
 # [2.1.0](https://github.com/bobbyg603/ngx-toggle/compare/v2.0.0...v2.1.0) (2022-06-27)
 
 
