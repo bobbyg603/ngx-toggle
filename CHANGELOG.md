@@ -1,3 +1,10 @@
+## [3.0.2](https://github.com/bobbyg603/ngx-toggle/compare/v3.0.1...v3.0.2) (2022-08-11)
+
+
+### Bug Fixes
+
+* update .releaserc ([bc57fe7](https://github.com/bobbyg603/ngx-toggle/commit/bc57fe7a7870a7fe5c8bf1a8315567cfd9a0ec76))
+
 ## [3.0.1](https://github.com/bobbyg603/ngx-toggle/compare/v3.0.0...v3.0.1) (2022-06-27)
 
 
