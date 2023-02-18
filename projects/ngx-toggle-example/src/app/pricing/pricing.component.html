@@ -1,0 +1,110 @@
+<div class="row">
+    <div class="col-12 py-4 text-center">
+        Monthly
+        <ngx-toggle id="toggle-example" [(checked)]="checked" [disabled]="false"
+            (checkedChange)="onCheckedChange($event)">
+        </ngx-toggle>
+        Annually
+    </div>
+</div>
+<div class="row">
+    <div class="col-12 col-md-4 my-4 my-md-0 my-4 my-md-0">
+        <div class="card text-center">
+            <div class="title">
+                <div class="icon mx-auto">
+                    <fa-icon [icon]="faPaperPlane" aria-hidden="true"></fa-icon>
+                </div>
+                <h2>Basic</h2>
+            </div>
+            <div class="price">
+                <h4>
+                    <sup>$</sup>
+                    <ngx-animated-counter [params]="basicPriceParams"></ngx-animated-counter>
+                </h4>
+            </div>
+            <div class="option">
+                <ul>
+                    <li>
+                        <fa-icon [icon]="faCheck" aria-hidden="true"></fa-icon> Feature #1
+                    </li>
+                    <li>
+                        <fa-icon [icon]="faCheck" aria-hidden="true"></fa-icon> Feature #2
+                    </li>
+                    <li>
+                        <fa-icon [icon]="faTimes" aria-hidden="true"></fa-icon> Feature #3
+                    </li>
+                    <li>
+                        <fa-icon [icon]="faTimes" aria-hidden="true"></fa-icon> Feature #4
+                    </li>
+                </ul>
+            </div>
+            <a [routerLink]="['/checkout']">Order Now</a>
+        </div>
+    </div>
+    <div class="col-12 col-md-4 my-4 my-md-0">
+        <div class="card text-center">
+            <div class="title">
+                <div class="icon mx-auto">
+                    <fa-icon [icon]="faPlane" aria-hidden="true"></fa-icon>
+                </div>
+                <h2>Standard</h2>
+            </div>
+            <div class="price">
+                <h4>
+                    <sup>$</sup>
+                    <ngx-animated-counter [params]="standardPriceParams"></ngx-animated-counter>
+                </h4>
+            </div>
+            <div class="option">
+                <ul>
+                    <li>
+                        <fa-icon [icon]="faCheck" aria-hidden="true"></fa-icon> Feature #1
+                    </li>
+                    <li>
+                        <fa-icon [icon]="faCheck" aria-hidden="true"></fa-icon> Feature #2
+                    </li>
+                    <li>
+                        <fa-icon [icon]="faCheck" aria-hidden="true"></fa-icon> Feature #3
+                    </li>
+                    <li>
+                        <fa-icon [icon]="faTimes" aria-hidden="true"></fa-icon> Feature #4
+                    </li>
+                </ul>
+            </div>
+            <a [routerLink]="['/checkout']">Order Now</a>
+        </div>
+    </div>
+    <div class="col-12 col-md-4 my-4 my-md-0">
+        <div class="card text-center">
+            <div class="title">
+                <div class="icon mx-auto">
+                    <fa-icon [icon]="faSpaceShuttle" aria-hidden="true"></fa-icon>
+                </div>
+                <h2>Premium</h2>
+            </div>
+            <div class="price">
+                <h4>
+                    <sup>$</sup>
+                    <ngx-animated-counter [params]="premiumPriceParams"></ngx-animated-counter>
+                </h4>
+            </div>
+            <div class="option">
+                <ul>
+                    <li>
+                        <fa-icon [icon]="faCheck" aria-hidden="true"></fa-icon> Feature #1
+                    </li>
+                    <li>
+                        <fa-icon [icon]="faCheck" aria-hidden="true"></fa-icon> Feature #2
+                    </li>
+                    <li>
+                        <fa-icon [icon]="faCheck" aria-hidden="true"></fa-icon> Feature #3
+                    </li>
+                    <li>
+                        <fa-icon [icon]="faCheck" aria-hidden="true"></fa-icon> Feature #4
+                    </li>
+                </ul>
+            </div>
+            <a [routerLink]="['/checkout']">Order Now</a>
+        </div>
+    </div>
+</div>

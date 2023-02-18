@@ -1,3 +1,43 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="https://github.com/bobbyg603/ngx-toggle" target="_blank">
+      ngx-toggle
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-label="Toggle navigation" [attr.aria-expanded]="!isNavbarCollapsed"
+      (click)="isNavbarCollapsed = !isNavbarCollapsed">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent" [ngbCollapse]="isNavbarCollapsed">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['pricing']" [routerLinkActive]="['active']">Toggle</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['checkout']" [routerLinkActive]="['active']">Form Control</a>
+        </li>
+      </ul>
+
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="https://betterprogramming.pub/ci-cd-for-angular-developers-be9a1485d22b">
+            <fa-icon [icon]="faMedium" size="xl" aria-hidden="true"></fa-icon>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/bobbyg603/ngx-toggle">
+            <fa-icon [icon]="faGithub" size="xl" aria-hidden="true"></fa-icon>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://twitter.com/bobbyg603">
+            <fa-icon [icon]="faTwitter" size="xl" aria-hidden="true"></fa-icon>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
 <section>
   <div class="container-fluid">
     <div class="container">
@@ -6,116 +46,7 @@
           <h1>ngx-toggle-example</h1>
         </div>
       </div>
-      <div class="row">
-        <div class="col-12 py-4 text-center">
-          Monthly
-          <ngx-toggle id="toggle-example" [(checked)]="checked" [disabled]="false"
-            (checkedChange)="onCheckedChange($event)">
-          </ngx-toggle>
-          Annually
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-12 col-md-4 my-4 my-md-0 my-4 my-md-0">
-          <div class="card text-center">
-            <div class="title">
-              <div class="icon mx-auto">
-                <fa-icon [icon]="faPaperPlane" aria-hidden="true"></fa-icon>
-              </div>
-              <h2>Basic</h2>
-            </div>
-            <div class="price">
-              <h4>
-                <sup>$</sup>
-                <ngx-animated-counter [params]="basicPriceParams"></ngx-animated-counter>
-              </h4>
-            </div>
-            <div class="option">
-              <ul>
-                <li>
-                  <fa-icon [icon]="faCheck" aria-hidden="true"></fa-icon> Feature #1
-                </li>
-                <li>
-                  <fa-icon [icon]="faCheck" aria-hidden="true"></fa-icon> Feature #2
-                </li>
-                <li>
-                  <fa-icon [icon]="faTimes" aria-hidden="true"></fa-icon> Feature #3
-                </li>
-                <li>
-                  <fa-icon [icon]="faTimes" aria-hidden="true"></fa-icon> Feature #4
-                </li>
-              </ul>
-            </div>
-            <a href="#">Order Now</a>
-          </div>
-        </div>
-        <div class="col-12 col-md-4 my-4 my-md-0">
-          <div class="card text-center">
-            <div class="title">
-              <div class="icon mx-auto">
-                <fa-icon [icon]="faPlane" aria-hidden="true"></fa-icon>
-              </div>
-              <h2>Standard</h2>
-            </div>
-            <div class="price">
-              <h4>
-                <sup>$</sup>
-                <ngx-animated-counter [params]="standardPriceParams"></ngx-animated-counter>
-              </h4>
-            </div>
-            <div class="option">
-              <ul>
-                <li>
-                  <fa-icon [icon]="faCheck" aria-hidden="true"></fa-icon> Feature #1
-                </li>
-                <li>
-                  <fa-icon [icon]="faCheck" aria-hidden="true"></fa-icon> Feature #2
-                </li>
-                <li>
-                  <fa-icon [icon]="faCheck" aria-hidden="true"></fa-icon> Feature #3
-                </li>
-                <li>
-                  <fa-icon [icon]="faTimes" aria-hidden="true"></fa-icon> Feature #4
-                </li>
-              </ul>
-            </div>
-            <a href="#">Order Now</a>
-          </div>
-        </div>
-        <div class="col-12 col-md-4 my-4 my-md-0">
-          <div class="card text-center">
-            <div class="title">
-              <div class="icon mx-auto">
-                <fa-icon [icon]="faSpaceShuttle" aria-hidden="true"></fa-icon>
-              </div>
-              <h2>Premium</h2>
-            </div>
-            <div class="price">
-              <h4>
-                <sup>$</sup>
-                <ngx-animated-counter [params]="premiumPriceParams"></ngx-animated-counter>
-              </h4>
-            </div>
-            <div class="option">
-              <ul>
-                <li>
-                  <fa-icon [icon]="faCheck" aria-hidden="true"></fa-icon> Feature #1
-                </li>
-                <li>
-                  <fa-icon [icon]="faCheck" aria-hidden="true"></fa-icon> Feature #2
-                </li>
-                <li>
-                  <fa-icon [icon]="faCheck" aria-hidden="true"></fa-icon> Feature #3
-                </li>
-                <li>
-                  <fa-icon [icon]="faCheck" aria-hidden="true"></fa-icon> Feature #4
-                </li>
-              </ul>
-            </div>
-            <a href="#">Order Now</a>
-          </div>
-        </div>
-      </div>
+      <router-outlet></router-outlet>
     </div>
   </div>
 </section>
