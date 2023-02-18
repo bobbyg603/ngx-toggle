@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { faCheck, faPaperPlane, faPlane, faSpaceShuttle, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +11,7 @@ export class AppComponent {
   title = 'ngx-toggle-example';
 
   faCheck = faCheck;
+  faGithub = faGithub;
   faPaperPlane = faPaperPlane;
   faPlane = faPlane;
   faTimes = faTimes;
