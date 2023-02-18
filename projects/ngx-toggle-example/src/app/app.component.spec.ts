@@ -1,4 +1,5 @@
 import { TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 import { NgxAnimatedCounterModule } from '@bugsplat/ngx-animated-counter';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgxToggleComponent } from 'ngx-toggle';
@@ -9,7 +10,8 @@ describe('AppComponent', () => {
     await TestBed.configureTestingModule({
       imports: [
         NgxAnimatedCounterModule,
-        FontAwesomeModule
+        FontAwesomeModule,
+        RouterTestingModule
       ],
       declarations: [
         AppComponent,
@@ -28,12 +30,5 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     expect(app.title).toEqual('ngx-toggle-example');
-  });
-
-  it('should render ngx-toggle', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('ngx-toggle i')).toBeTruthy();
   });
 });

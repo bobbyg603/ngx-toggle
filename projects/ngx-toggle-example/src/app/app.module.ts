@@ -5,17 +5,39 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgxToggleModule } from 'ngx-toggle';
 import { AppComponent } from './app.component';
+import { PricingComponent } from './pricing/pricing.component';
+import { CheckoutComponent } from './checkout/checkout.component';
+import { RouterModule } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PricingComponent,
+    CheckoutComponent,
   ],
   imports: [
     BrowserModule,
+    FontAwesomeModule,
     NgxAnimatedCounterModule,
     NgxToggleModule,
     NgbModule,
-    FontAwesomeModule
+    ReactiveFormsModule,
+    RouterModule.forRoot([
+      {
+        path: '',
+        redirectTo: 'pricing',
+        pathMatch: 'full'
+      },
+      {
+        path: 'pricing',
+        component: PricingComponent
+      },
+      {
+        path: 'checkout',
+        component: CheckoutComponent
+      }
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]

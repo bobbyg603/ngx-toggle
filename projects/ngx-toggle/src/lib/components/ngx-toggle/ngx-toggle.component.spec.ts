@@ -2,7 +2,6 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { firstValueFrom } from 'rxjs';
 import { NgxToggleComponent } from './ngx-toggle.component';
 
-
 describe('NgxToggleComponent', () => {
   let component: NgxToggleComponent;
   let fixture: ComponentFixture<NgxToggleComponent>;
@@ -17,6 +16,8 @@ describe('NgxToggleComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(NgxToggleComponent);
     component = fixture.componentInstance;
+    component.onChange = jasmine.createSpy();
+    component.onTouched = jasmine.createSpy();
     fixture.detectChanges();
   });
 
@@ -48,7 +49,9 @@ describe('NgxToggleComponent', () => {
       component.disabled = disabled;
       fixture.detectChanges();
 
-      expect(fixture.nativeElement.querySelector('input').disabled).toEqual(disabled);
+      const input = fixture.nativeElement.querySelector('input');
+      expect(input.disabled).toEqual(disabled);
+      expect(input.classList).toContain('disabled');
     });
 
     it('should not disable input if disabled is false', () => {
@@ -56,7 +59,9 @@ describe('NgxToggleComponent', () => {
       component.disabled = disabled;
       fixture.detectChanges();
 
-      expect(fixture.nativeElement.querySelector('input').disabled).toEqual(disabled);
+      const input = fixture.nativeElement.querySelector('input');
+      expect(input.disabled).toEqual(disabled);
+      expect(input.classList).not.toContain('disabled');
     });
   });
 
@@ -71,6 +76,22 @@ describe('NgxToggleComponent', () => {
   });
 
   describe('click', () => {
+    it('should call onChange with new value', () => {
+      const checked = true;
+
+      component.onClick({ target: { checked } });
+
+      expect(component.onChange).toHaveBeenCalledWith(checked);
+    });
+
+    it('should call onTouched', () => {
+      const checked = true;
+
+      component.onClick({ target: { checked } });
+
+      expect(component.onTouched).toHaveBeenCalled();
+    });
+
     it('should emit checkedChanged', async () => {
       const checked = true;
       const resultPromise = firstValueFrom(component.checkedChange);
@@ -81,6 +102,46 @@ describe('NgxToggleComponent', () => {
       const result = await resultPromise;
 
       expect(result).toEqual(checked);
+    });
+  });
+
+  describe('registerOnChange', () => {
+    it('should set onChange', () => {
+      const onChange = 'foo' as any;
+
+      component.registerOnChange(onChange);
+
+      expect(component.onChange).toEqual(onChange);
+    });
+  });
+
+  describe('registerOnTouched', () => {
+    it('should set onTouched', () => {
+      const onTouched = 'foo' as any;
+
+      component.registerOnTouched(onTouched);
+
+      expect(component.onTouched).toEqual(onTouched);
+    });
+  });
+
+  describe('setDisabledState', () => {
+    it('should set disabled', () => {
+      const disabled = true;
+
+      component.setDisabledState(disabled);
+
+      expect(component.disabled).toEqual(disabled);
+    });
+  });
+
+  describe('writeValue', () => {
+    it('should set checked', () => {
+      const checked = true;
+
+      component.writeValue(checked);
+
+      expect(component.checked).toEqual(checked);
     });
   });
 });
