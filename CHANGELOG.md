@@ -1,3 +1,10 @@
+# [3.1.0](https://github.com/bobbyg603/ngx-toggle/compare/v3.0.2...v3.1.0) (2023-02-18)
+
+
+### Features
+
+* form control support ([#9](https://github.com/bobbyg603/ngx-toggle/issues/9)) ([8439965](https://github.com/bobbyg603/ngx-toggle/commit/84399652d8f82c4ae6e363e972df95c57735afca)), closes [#8](https://github.com/bobbyg603/ngx-toggle/issues/8) [#3](https://github.com/bobbyg603/ngx-toggle/issues/3)
+
 ## [3.0.2](https://github.com/bobbyg603/ngx-toggle/compare/v3.0.1...v3.0.2) (2022-08-11)
 
 
