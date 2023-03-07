@@ -1,3 +1,10 @@
+## [3.1.2](https://github.com/bobbyg603/ngx-toggle/compare/v3.1.1...v3.1.2) (2023-03-07)
+
+
+### Bug Fixes
+
+* allow newer peerDependencies ([a900b66](https://github.com/bobbyg603/ngx-toggle/commit/a900b667b07b20c76e7c6be48684750d4156e53a))
+
 ## [3.1.1](https://github.com/bobbyg603/ngx-toggle/compare/v3.1.0...v3.1.1) (2023-02-18)
 
 
